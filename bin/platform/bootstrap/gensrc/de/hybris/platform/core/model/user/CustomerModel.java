@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 28.04.2019 14:50:24                         ---
+ * --- Generated at 20.05.2019 9:30:27                          ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -18,6 +18,7 @@ import de.hybris.platform.catalog.model.CatalogVersionModel;
 import de.hybris.platform.core.model.ItemModel;
 import de.hybris.platform.core.model.user.UserModel;
 import de.hybris.platform.servicelayer.model.ItemModelContext;
+import expandcustomer.model.SportModel;
 import java.util.Collection;
 
 /**
@@ -34,6 +35,9 @@ public class CustomerModel extends UserModel
 	
 	/** <i>Generated constant</i> - Attribute key of <code>Customer.previewCatalogVersions</code> attribute defined at extension <code>catalog</code>. */
 	public static final String PREVIEWCATALOGVERSIONS = "previewCatalogVersions";
+	
+	/** <i>Generated constant</i> - Attribute key of <code>Customer.sport</code> attribute defined at extension <code>expandcustomer</code>. */
+	public static final String SPORT = "sport";
 	
 	
 	/**
@@ -106,6 +110,16 @@ public class CustomerModel extends UserModel
 	}
 	
 	/**
+	 * <i>Generated method</i> - Getter of the <code>Customer.sport</code> attribute defined at extension <code>expandcustomer</code>. 
+	 * @return the sport
+	 */
+	@Accessor(qualifier = "sport", type = Accessor.Type.GETTER)
+	public SportModel getSport()
+	{
+		return getPersistenceContext().getPropertyValue(SPORT);
+	}
+	
+	/**
 	 * <i>Generated method</i> - Setter of <code>Customer.customerID</code> attribute defined at extension <code>core</code>. 
 	 *  
 	 * @param value the customerID
@@ -125,6 +139,17 @@ public class CustomerModel extends UserModel
 	public void setPreviewCatalogVersions(final Collection<CatalogVersionModel> value)
 	{
 		getPersistenceContext().setPropertyValue(PREVIEWCATALOGVERSIONS, value);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of <code>Customer.sport</code> attribute defined at extension <code>expandcustomer</code>. 
+	 *  
+	 * @param value the sport
+	 */
+	@Accessor(qualifier = "sport", type = Accessor.Type.SETTER)
+	public void setSport(final SportModel value)
+	{
+		getPersistenceContext().setPropertyValue(SPORT, value);
 	}
 	
 }
